@@ -1,0 +1,31 @@
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+gen/
+
+### Build Tools (Maven/Gradle) ###
+target/
+build/
+.gradle/
+.m2/
+bin/
+
+### Spring Boot ###
+*.log
+*.temp
+/logs
+.sts4-cache
+.springBeans
+
+### System Files ###
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+### Secrets/Local Configs (Optional but recommended) ###
+.env
+*.properties.local
+*.yml.local

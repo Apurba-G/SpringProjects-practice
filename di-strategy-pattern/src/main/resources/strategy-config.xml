@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define the two strategy beans -->
+    <bean id="bubbleSort" class="com.example.strategy.common.BubbleSort"/>
+    <bean id="quickSort"  class="com.example.strategy.common.QuickSort"/>
+
+    <!-- Context bean with constructor injection using bubbleSort -->
+    <bean id="sorter" class="com.example.strategy.spring.xml.XmlSorter">
+        <constructor-arg ref="quickSort"/>   <!-- choose QuickSort here -->
+    </bean>
+</beans>
